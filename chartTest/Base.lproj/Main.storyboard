@@ -1,24 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KDp-DQ-T7m">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My Table View Controller-->
+        <scene sceneID="bHn-H5-o9l">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="KDp-DQ-T7m" customClass="MyTableViewController" customModule="chartTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="1" sectionHeaderHeight="18" sectionFooterHeight="18" id="sLv-hk-0aI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection headerTitle="長條圖" id="SN9-KP-eXC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="Km7-jS-eLb">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="286"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Km7-jS-eLb" id="bg4-mK-9K6">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="286"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFk-zG-Fyg" customClass="BarChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="11" width="350" height="264"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MFk-zG-Fyg" firstAttribute="leading" secondItem="bg4-mK-9K6" secondAttribute="leadingMargin" id="ELH-dw-x3r"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MFk-zG-Fyg" secondAttribute="trailing" id="W1s-b8-zDk"/>
+                                                <constraint firstItem="MFk-zG-Fyg" firstAttribute="top" secondItem="bg4-mK-9K6" secondAttribute="topMargin" id="ubK-L7-y0d"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MFk-zG-Fyg" secondAttribute="bottom" id="uut-7n-Zf1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="折線圖" id="J6D-Zt-Vnw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="Jli-Hf-Lz2">
+                                        <rect key="frame" x="0.0" y="414" width="390" height="289"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jli-Hf-Lz2" id="svi-Tx-bUy">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="289"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-bu-WAm" customClass="LineChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="11" width="350" height="267"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GyN-bu-WAm" secondAttribute="bottom" id="4nE-ol-o2h"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GyN-bu-WAm" secondAttribute="trailing" id="KoW-jT-GlM"/>
+                                                <constraint firstItem="GyN-bu-WAm" firstAttribute="top" secondItem="svi-Tx-bUy" secondAttribute="topMargin" id="NVy-b8-7DU"/>
+                                                <constraint firstItem="GyN-bu-WAm" firstAttribute="leading" secondItem="svi-Tx-bUy" secondAttribute="leadingMargin" id="ng4-BQ-jQB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="曲線圖" id="aCP-FQ-qRw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="duI-wo-TlG">
+                                        <rect key="frame" x="0.0" y="781" width="390" height="285"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="duI-wo-TlG" id="0G1-35-bkh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="285"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sn-no-rnO" customClass="LineChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="11" width="350" height="263"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1sn-no-rnO" firstAttribute="leading" secondItem="0G1-35-bkh" secondAttribute="leadingMargin" id="By9-uc-TxD"/>
+                                                <constraint firstItem="1sn-no-rnO" firstAttribute="top" secondItem="0G1-35-bkh" secondAttribute="topMargin" id="Mjx-7P-qOT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1sn-no-rnO" secondAttribute="trailing" id="WtX-bU-NhZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1sn-no-rnO" secondAttribute="bottom" id="ySd-Cd-lPU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="圓餅圖" id="GCj-iu-zbc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="aeD-LC-hi5">
+                                        <rect key="frame" x="0.0" y="1144" width="390" height="285"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aeD-LC-hi5" id="KTu-9z-TZi">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="285"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58C-Ti-Vb6" customClass="PieChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="11" width="350" height="263"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="58C-Ti-Vb6" secondAttribute="bottom" id="gxN-Lk-saG"/>
+                                                <constraint firstItem="58C-Ti-Vb6" firstAttribute="leading" secondItem="KTu-9z-TZi" secondAttribute="leadingMargin" id="lJz-fC-Hae"/>
+                                                <constraint firstItem="58C-Ti-Vb6" firstAttribute="top" secondItem="KTu-9z-TZi" secondAttribute="topMargin" id="sV9-T7-RTn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="58C-Ti-Vb6" secondAttribute="trailing" id="tkC-Bw-tWk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="KDp-DQ-T7m" id="QTA-G4-zaD"/>
+                            <outlet property="delegate" destination="KDp-DQ-T7m" id="3Dd-QI-bvN"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="barChartView" destination="MFk-zG-Fyg" id="elQ-ed-kJP"/>
+                        <outlet property="cubicChartView" destination="1sn-no-rnO" id="ZXZ-iU-HQy"/>
+                        <outlet property="lineChartView" destination="GyN-bu-WAm" id="ROd-QR-xTz"/>
+                        <outlet property="pieChartView" destination="58C-Ti-Vb6" id="vhY-zj-CEJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1L-Ju-MvV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1370.7692307692307" y="8.5308056872037916"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
