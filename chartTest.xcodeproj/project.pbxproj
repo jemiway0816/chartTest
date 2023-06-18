@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		822FA57C2957320B00FA1AF9 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FA57B2957320B00FA1AF9 /* MyTableViewController.swift */; };
-		82BDB9202955F5A6007DEF7F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BDB91C2955F47B007DEF7F /* Charts.framework */; };
-		82BDB9212955F5A6007DEF7F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82BDB91C2955F47B007DEF7F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8242976A2A3EE29600E0E3E1 /* DGCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824297672A3EE27700E0E3E1 /* DGCharts.framework */; };
+		8242976B2A3EE29600E0E3E1 /* DGCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824297672A3EE27700E0E3E1 /* DGCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82EBBF262955E568000B2877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBBF252955E568000B2877 /* AppDelegate.swift */; };
 		82EBBF282955E568000B2877 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBBF272955E568000B2877 /* SceneDelegate.swift */; };
 		82EBBF2D2955E568000B2877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EBBF2B2955E568000B2877 /* Main.storyboard */; };
@@ -18,19 +18,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		82BDB91B2955F47B007DEF7F /* PBXContainerItemProxy */ = {
+		824297662A3EE27700E0E3E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 82BDB9162955F47B007DEF7F /* Charts.xcodeproj */;
+			containerPortal = 824297612A3EE27700E0E3E1 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
+			remoteInfo = DGCharts;
 		};
-		82BDB91D2955F47B007DEF7F /* PBXContainerItemProxy */ = {
+		824297682A3EE27700E0E3E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 82BDB9162955F47B007DEF7F /* Charts.xcodeproj */;
+			containerPortal = 824297612A3EE27700E0E3E1 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
+			remoteInfo = DGChartsTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				82BDB9212955F5A6007DEF7F /* Charts.framework in Embed Frameworks */,
+				8242976B2A3EE29600E0E3E1 /* DGCharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		822FA57B2957320B00FA1AF9 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
-		82BDB9162955F47B007DEF7F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		824297612A3EE27700E0E3E1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		82EBBF222955E568000B2877 /* chartTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chartTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82EBBF252955E568000B2877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82EBBF272955E568000B2877 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,18 +65,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82BDB9202955F5A6007DEF7F /* Charts.framework in Frameworks */,
+				8242976A2A3EE29600E0E3E1 /* DGCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82BDB9172955F47B007DEF7F /* Products */ = {
+		824297622A3EE27700E0E3E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82BDB91C2955F47B007DEF7F /* Charts.framework */,
-				82BDB91E2955F47B007DEF7F /* ChartsTests.xctest */,
+				824297672A3EE27700E0E3E1 /* DGCharts.framework */,
+				824297692A3EE27700E0E3E1 /* DGChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +84,7 @@
 		82BDB91F2955F5A6007DEF7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				824297612A3EE27700E0E3E1 /* Charts.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +109,6 @@
 		82EBBF242955E568000B2877 /* chartTest */ = {
 			isa = PBXGroup;
 			children = (
-				82BDB9162955F47B007DEF7F /* Charts.xcodeproj */,
 				82EBBF252955E568000B2877 /* AppDelegate.swift */,
 				82EBBF272955E568000B2877 /* SceneDelegate.swift */,
 				822FA57B2957320B00FA1AF9 /* MyTableViewController.swift */,
@@ -169,8 +169,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 82BDB9172955F47B007DEF7F /* Products */;
-					ProjectRef = 82BDB9162955F47B007DEF7F /* Charts.xcodeproj */;
+					ProductGroup = 824297622A3EE27700E0E3E1 /* Products */;
+					ProjectRef = 824297612A3EE27700E0E3E1 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -181,18 +181,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		82BDB91C2955F47B007DEF7F /* Charts.framework */ = {
+		824297672A3EE27700E0E3E1 /* DGCharts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 82BDB91B2955F47B007DEF7F /* PBXContainerItemProxy */;
+			path = DGCharts.framework;
+			remoteRef = 824297662A3EE27700E0E3E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		82BDB91E2955F47B007DEF7F /* ChartsTests.xctest */ = {
+		824297692A3EE27700E0E3E1 /* DGChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 82BDB91D2955F47B007DEF7F /* PBXContainerItemProxy */;
+			path = DGChartsTests.xctest;
+			remoteRef = 824297682A3EE27700E0E3E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

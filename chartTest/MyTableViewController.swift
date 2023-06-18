@@ -7,8 +7,13 @@
 
 import UIKit
 import Charts
+import DGCharts
 
 class MyTableViewController: UITableViewController, ChartViewDelegate, AxisValueFormatter {
+    func stringForValue(_ value: Double, axis: DGCharts.AxisBase?) -> String {
+        return testData[Int(value)]
+    }
+    
 
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var lineChartView: LineChartView!
@@ -38,9 +43,7 @@ class MyTableViewController: UITableViewController, ChartViewDelegate, AxisValue
         setPieChart(dataPoints: testData, values: unitsSold)
     }
 
-    func stringForValue(_ value: Double, axis: Charts.AxisBase?) -> String {
-        return testData[Int(value)]
-    }
+
     
     //設定長條圖
     func setBarChart(dataPoints:[String] , values:[Double]) {
